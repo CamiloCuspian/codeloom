@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router' // Cambiado aquí
 import Home from '../views/Home.vue'
 
 const routes = [
@@ -19,7 +19,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(), // Usar modo hash para mayor compatibilidad con GitHub Pages
   routes,
   scrollBehavior() {
     return { top: 0 }

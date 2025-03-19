@@ -3,16 +3,24 @@
     <div class="glitch-screen"></div>
     <div class="content">
       <nav class="nav">
-        <div class="logo">
-          <img
-            src="/src/assets/img/logo.avif"
-            alt="CodeLoom Agencia de Software"
-          />
-          <p>CodeLoom</p>
-        </div>
+        <router-link to="/home">
+            <div class="logo">
+            <img
+              src="/src/assets/img/logo.avif"
+              alt="CodeLoom Agencia de Software"
+            />
+            <p>CodeLoom</p>
+          </div>
+          </router-link>
+
         <div class="menu">
-          <a href="#">Precios</a>
-          <a href="#" class="get-started">Contáctanos</a>
+          <router-link to="/pricing">Precios</router-link>
+          <button
+              class="cta-button primary"
+              @click="openWhatsApp('573165695773', 'Presupuesto')"
+            >
+            Contáctanos
+            </button>
         </div>
       </nav>
       <div class="hero">
