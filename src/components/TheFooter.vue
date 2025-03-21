@@ -15,7 +15,7 @@
         >
           Consulta gratis
         </button>
-        <a href="#" class="link">Términos y Condiciones</a>
+        <router-link to="/politica-de-privacidad" class="link">Política de Privacidad</router-link>
       </div>
     </div>
 

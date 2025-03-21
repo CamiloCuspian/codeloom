@@ -1,5 +1,7 @@
-import { createRouter, createWebHashHistory } from 'vue-router' // Cambiado aquí
+import { createRouter, createWebHashHistory } from 'vue-router' 
 import Home from '../views/Home.vue'
+// Importar el componente PrivacyPolicy
+import PrivacyPolicy from '../views/PrivacyPolicy.vue'
 
 const routes = [
   {
@@ -11,6 +13,11 @@ const routes = [
     path: '/pricing',
     name: 'Pricing',
     component: () => import('../views/Pricing.vue')
+  },
+  {
+    path: '/politica-de-privacidad',
+    name: 'PrivacyPolicy',
+    component: PrivacyPolicy
   },
   {
     path: '/:pathMatch(.*)*',

@@ -14,7 +14,7 @@
           </router-link>
 
         <div class="menu">
-          <router-link to="/pricing">Precios</router-link>
+          <!-- <router-link to="/pricing">Precios</router-link> -->
           <button
               class="cta-button primary"
               @click="openWhatsApp('573165695773', 'Presupuesto')"
