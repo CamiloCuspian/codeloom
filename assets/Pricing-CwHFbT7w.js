@@ -1,0 +1,1 @@
+import{_ as n,c as r,a,o as i}from"./index-CVV8w6RE.js";const e=n({name:"Pricing"},[["render",function(n,e,s,o,t,c){return i(),r("div",null,e[0]||(e[0]=[a("h1",null,"Pricing",-1)]))}]]);export{e as default};
