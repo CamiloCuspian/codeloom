@@ -1,0 +1,348 @@
+/* animations.css - Animaciones para CodeLoom */
+
+/* Animación de fading para elementos */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animación de pulsación para CTA */
+@-webkit-keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(108, 99, 255, 0.4);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(108, 99, 255, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(108, 99, 255, 0);
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(108, 99, 255, 0.4);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(108, 99, 255, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(108, 99, 255, 0);
+  }
+}
+
+/* Animación de flotación para elementos */
+@-webkit-keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Animación de rotación para íconos o loaders */
+@-webkit-keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animación de shake para notificaciones o errores */
+@-webkit-keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-5px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(5px);
+  }
+}
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-5px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(5px);
+  }
+}
+
+/* Animación de rebote para elementos interactivos */
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Clases para aplicar las animaciones */
+.animate-fade-in {
+  -webkit-animation: fadeIn 0.8s ease forwards;
+          animation: fadeIn 0.8s ease forwards;
+}
+
+.animate-fade-in-up {
+  -webkit-animation: fadeInUp 0.8s ease forwards;
+          animation: fadeInUp 0.8s ease forwards;
+}
+
+.animate-fade-in-down {
+  -webkit-animation: fadeInDown 0.8s ease forwards;
+          animation: fadeInDown 0.8s ease forwards;
+}
+
+.animate-fade-in-left {
+  -webkit-animation: fadeInLeft 0.8s ease forwards;
+          animation: fadeInLeft 0.8s ease forwards;
+}
+
+.animate-fade-in-right {
+  -webkit-animation: fadeInRight 0.8s ease forwards;
+          animation: fadeInRight 0.8s ease forwards;
+}
+
+.animate-pulse {
+  -webkit-animation: pulse 2s infinite;
+          animation: pulse 2s infinite;
+}
+
+.animate-float {
+  -webkit-animation: float 3s ease-in-out infinite;
+          animation: float 3s ease-in-out infinite;
+}
+
+.animate-rotate {
+  -webkit-animation: rotate 2s linear infinite;
+          animation: rotate 2s linear infinite;
+}
+
+.animate-shake {
+  -webkit-animation: shake 0.5s ease-in-out;
+          animation: shake 0.5s ease-in-out;
+}
+
+.animate-bounce {
+  -webkit-animation: bounce 2s ease infinite;
+          animation: bounce 2s ease infinite;
+}
+
+/* Clases con retraso para animaciones secuenciales */
+.delay-100 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.delay-200 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.delay-300 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.delay-400 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.delay-500 {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.delay-700 {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+.delay-1000 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+/* Clases de utilidad para desplazamiento */
+.stagger-item:nth-child(1) { -webkit-animation-delay: 0.1s; animation-delay: 0.1s; }
+.stagger-item:nth-child(2) { -webkit-animation-delay: 0.2s; animation-delay: 0.2s; }
+.stagger-item:nth-child(3) { -webkit-animation-delay: 0.3s; animation-delay: 0.3s; }
+.stagger-item:nth-child(4) { -webkit-animation-delay: 0.4s; animation-delay: 0.4s; }
+.stagger-item:nth-child(5) { -webkit-animation-delay: 0.5s; animation-delay: 0.5s; }
+.stagger-item:nth-child(6) { -webkit-animation-delay: 0.6s; animation-delay: 0.6s; }
+.stagger-item:nth-child(7) { -webkit-animation-delay: 0.7s; animation-delay: 0.7s; }
+.stagger-item:nth-child(8) { -webkit-animation-delay: 0.8s; animation-delay: 0.8s; }
+
+/* Animación para el logo */
+.logo-animation {
+  -webkit-animation: fadeIn 1s ease, float 3s ease-in-out infinite;
+          animation: fadeIn 1s ease, float 3s ease-in-out infinite;
+}
+
+/* Animación para botones call-to-action */
+.cta-animation {
+  -webkit-animation: pulse 2s infinite;
+          animation: pulse 2s infinite;
+}
+
+/* Animación para la carga de la página */
+.page-transition-enter-active,
+.page-transition-leave-active {
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.page-transition-enter-from,
+.page-transition-leave-to {
+  opacity: 0;
+  transform: translateY(20px);
+}

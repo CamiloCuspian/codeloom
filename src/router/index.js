@@ -1,36 +1,62 @@
-import { createRouter, createWebHashHistory } from 'vue-router' 
-import Home from '../views/Home.vue'
-// Importar el componente PrivacyPolicy
-import PrivacyPolicy from '../views/PrivacyPolicy.vue'
+import { createRouter, createWebHistory } from 'vue-router'
 
+// Importar vistas
+import HomeView from '../views/HomeView.vue'
+
+// Configuración de rutas
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'home',
+    component: HomeView,
+    meta: { title: 'Inicio | CodeLoom' }
   },
   {
-    path: '/pricing',
-    name: 'Pricing',
-    component: () => import('../views/Pricing.vue')
+    path: '/portfolio',
+    name: 'portfolio',
+    component: () => import('../views/PortfolioView.vue'),
+    meta: { title: 'Portafolio | CodeLoom' }
   },
   {
-    path: '/politica-de-privacidad',
-    name: 'PrivacyPolicy',
-    component: PrivacyPolicy
+    path: '/about',
+    name: 'about',
+    component: () => import('../views/AboutView.vue'),
+    meta: { title: 'Sobre mí | CodeLoom' }
   },
   {
-    path: '/:pathMatch(.*)*',
-    redirect: '/'
+    path: '/contact',
+    name: 'contact',
+    component: () => import('../views/ContactView.vue'),
+    meta: { title: 'Contacto | CodeLoom' }
+  },
+  // Ruta para 404
+  {
+    path: '/:catchAll(.*)',
+    name: 'NotFound',
+    component: () => import('../views/NotFoundView.vue'),
+    meta: { title: 'Página no encontrada | CodeLoom' }
   }
 ]
 
+// Crear instancia del router
 const router = createRouter({
-  history: createWebHashHistory(), // Usar modo hash para mayor compatibilidad con GitHub Pages
+  history: createWebHistory(),
   routes,
-  scrollBehavior() {
-    return { top: 0 }
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else if (to.hash) {
+      return { el: to.hash, behavior: 'smooth' }
+    } else {
+      return { top: 0, behavior: 'smooth' }
+    }
   }
+})
+
+// Cambiar el título de la página según la ruta
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title || 'CodeLoom | Desarrollo Web & eCommerce'
+  next()
 })
 
 export default router

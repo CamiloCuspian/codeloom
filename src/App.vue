@@ -1,36 +1,41 @@
 <template>
-  <div id="app">
-    <TheNavbar />
-    <main class="main-content">
-      <router-view />
-    </main>
-    <TheFooter />
-  </div>
+  <TheHeader />
+  <main>
+    <router-view v-slot="{ Component }">
+      <transition name="page" mode="out-in">
+        <component :is="Component" />
+      </transition>
+    </router-view>
+  </main>
+  <TheFooter />
 </template>
 
 <script>
-import TheNavbar from './components/TheNavbar.vue'
-import TheFooter from './components/TheFooter.vue'
+import TheHeader from './components/layout/TheHeader.vue'
+import TheFooter from './components/layout/TheFooter.vue'
 
 export default {
   name: 'App',
   components: {
-    TheNavbar,
+    TheHeader,
     TheFooter
   }
 }
 </script>
 
 <style>
-@import './assets/css/main.css';
-
-#app {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.main-content {
-  flex: 1;
+.page-enter-from {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(-20px);
 }
 </style>
