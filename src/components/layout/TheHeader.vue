@@ -115,7 +115,7 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   font-weight: 600;
-  color: var(--principal);
+  color: var(--azul-oscuro);
   position: relative;
   padding: 0.5rem 0;
 }

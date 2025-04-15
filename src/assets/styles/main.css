@@ -1,11 +1,11 @@
 :root {
-  /*** COLORES - Paleta modernizada para CodeLoom ***/
-  --principal: #2D3047; /* Azul oscuro profesional */
-  --accion: #6C63FF;    /* Púrpura vibrante para CTA */
-  --secundario: #4A3DE8; /* Púrpura secundario */
-  --acento: #6c63ff17;   /* Versión transparente de acción */
+  --principal: #2D3047;
+  --azul-oscuro: #16213E;
+  --accion: #6C63FF;   
+  --secundario: #4A3DE8; 
+  --acento: #6c63ff17;   
   --blanco: #FDFDFD;
-  --gris: #F7F7F2;
+  --gris: #16213E;
   --grisFuentes: #2D2D2D;
   --fuente: "Montserrat", sans-serif;
   --radius: 16px;       /* Redondeado más moderno */
@@ -30,7 +30,7 @@ html {
 body {
   color: var(--grisFuentes);
   font-family: var(--fuente);
-  background-color: #fefefe;
+  background-color: #0F0F1A;
 }
 
 h1, h2, h3, h4 {
@@ -424,19 +424,3 @@ textarea.form-control {
   }
 }
 
-/* Dark mode - opcional */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --blanco: #1A1A2E;
-    --gris: #16213E;
-    --grisFuentes: #E2E2E2;
-  }
-  
-  body {
-    background-color: #0F0F1A;
-  }
-  
-  .card, .form-control {
-    background-color: var(--gris);
-  }
-}

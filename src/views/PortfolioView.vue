@@ -4,24 +4,27 @@
     <section class="page-banner">
       <div class="content">
         <h1 class="animate-fade-in-up">Nuestro Portafolio</h1>
-        <p class="animate-fade-in-up delay-200">Explora nuestros proyectos y descubre cómo transformamos ideas en soluciones digitales excepcionales</p>
+        <p class="animate-fade-in-up delay-200">
+          Explora nuestros proyectos y descubre cómo transformamos ideas en
+          soluciones digitales excepcionales
+        </p>
       </div>
     </section>
-    
+
     <!-- Filtros de categoría -->
     <section class="portfolio-filters">
       <div class="content">
         <div class="filters-container" ref="filtersContainer">
-          <button 
-            :class="{ 'active': activeFilter === 'all' }" 
+          <button
+            :class="{ active: activeFilter === 'all' }"
             @click="filterProjects('all')"
           >
             Todos
           </button>
-          <button 
-            v-for="category in categories" 
-            :key="category" 
-            :class="{ 'active': activeFilter === category }" 
+          <button
+            v-for="category in categories"
+            :key="category"
+            :class="{ active: activeFilter === category }"
             @click="filterProjects(category)"
           >
             {{ category }}
@@ -29,43 +32,52 @@
         </div>
       </div>
     </section>
-    
+
     <!-- Cuadrícula de proyectos -->
     <section class="portfolio-grid section-padding">
       <div class="content">
         <div class="projects-container" ref="projectsContainer">
-          <div 
-            v-for="(project, index) in filteredProjects" 
+          <div
+            v-for="(project, index) in filteredProjects"
             :key="project.id"
             class="portfolio-item"
             :class="{ 'stagger-item': true }"
           >
             <div class="portfolio-image">
-              <img :src="project.image" :alt="project.title" loading="lazy">
+              <img :src="project.image" :alt="project.title" loading="lazy" />
               <div class="portfolio-category">{{ project.category }}</div>
             </div>
             <div class="portfolio-overlay">
               <h3>{{ project.title }}</h3>
               <p>{{ project.description }}</p>
               <div class="portfolio-tags">
-                <span v-for="(tag, tagIndex) in project.tags" :key="tagIndex">{{ tag }}</span>
+                <span v-for="(tag, tagIndex) in project.tags" :key="tagIndex">{{
+                  tag
+                }}</span>
               </div>
-              <router-link :to="'/portfolio/' + project.id" class="boton boton_1">
+              <a
+                :href="project.url"
+                class="boton boton_1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Ver detalles
-              </router-link>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
-    
+
     <!-- Sección de contacto -->
     <section class="portfolio-cta">
       <div class="content">
         <div class="cta-box" ref="ctaBox">
           <h2>¿Tienes un proyecto en mente?</h2>
           <p>Cuéntanos sobre tu idea y te ayudaremos a hacerla realidad</p>
-          <router-link to="/contact" class="boton boton_1 cta-animation">Contáctanos</router-link>
+          <router-link to="/contact" class="boton boton_1 cta-animation"
+            >Contáctanos</router-link
+          >
         </div>
       </div>
     </section>
@@ -74,138 +86,153 @@
 
 <script>
 export default {
-  name: 'PortfolioView',
+  name: "PortfolioView",
   data() {
     return {
-      activeFilter: 'all',
+      activeFilter: "all",
       projects: [
         {
-          id: 'ecommerce-moda',
-          title: 'FashionWave',
-          description: 'Tienda online de moda con catálogo dinámico, pasarela de pagos y sistema de gestión de inventario.',
-          image: '/images/portfolio-1.jpg',
-          category: 'eCommerce',
-          tags: ['Vue.js', 'Stripe', 'MongoDB', 'Responsive']
+          id: "ecommerce-moda",
+          title: "Perfumeria Inspiración",
+          description:
+            "Tienda online de perfumes con catálogo dinámico, pasarela de pagos y sistema de gestión de inventario.",
+          image: "/images/inspiracion-perfumeria.avif",
+          category: "eCommerce",
+          tags: ["Vue.js", "Stripe", "MongoDB", "Responsive"],
+          url: "https://inspiracion-gamma.vercel.app/",
         },
         {
-          id: 'app-restaurante',
-          title: 'FoodExpress',
-          description: 'Plataforma web para pedidos online de restaurante con reserva de mesas y sistema de fidelización.',
-          image: '/images/portfolio-2.jpg',
-          category: 'Aplicación Web',
-          tags: ['React', 'Node.js', 'API REST', 'UX/UI']
+          id: "app-restaurante",
+          title: "FoodExpress",
+          description:
+            "Plataforma web para pedidos online de restaurante con reserva de mesas y sistema de fidelización.",
+          image: "/images/portfolio-2.jpg",
+          category: "Aplicación Web",
+          tags: ["React", "Node.js", "API REST", "UX/UI"],
         },
         {
-          id: 'web-corporativa',
-          title: 'ConsultX',
-          description: 'Sitio web corporativo para firma de consultoría con integración CRM y optimización SEO avanzada.',
-          image: '/images/portfolio-3.jpg',
-          category: 'Sitio Web',
-          tags: ['WordPress', 'SEO', 'Custom CMS', 'Analytics']
+          id: "web-corporativa",
+          title: "ConsultX",
+          description:
+            "Sitio web corporativo para firma de consultoría con integración CRM y optimización SEO avanzada.",
+          image: "/images/portfolio-3.jpg",
+          category: "Sitio Web",
+          tags: ["WordPress", "SEO", "Custom CMS", "Analytics"],
         },
         {
-          id: 'app-inmobiliaria',
-          title: 'InmoSearch',
-          description: 'Aplicación web para búsqueda y gestión de propiedades inmobiliarias con mapas interactivos.',
-          image: '/images/portfolio-4.jpg',
-          category: 'Aplicación Web',
-          tags: ['Angular', 'Firebase', 'Google Maps API', 'PWA']
+          id: "app-inmobiliaria",
+          title: "InmoSearch",
+          description:
+            "Aplicación web para búsqueda y gestión de propiedades inmobiliarias con mapas interactivos.",
+          image: "/images/portfolio-4.jpg",
+          category: "Aplicación Web",
+          tags: ["Angular", "Firebase", "Google Maps API", "PWA"],
         },
         {
-          id: 'ecommerce-electro',
-          title: 'TechStore',
-          description: 'eCommerce de productos electrónicos con sistema de recomendaciones y comparador de productos.',
-          image: '/images/portfolio-5.jpg',
-          category: 'eCommerce',
-          tags: ['Shopify', 'JavaScript', 'Algolia', 'Responsive']
+          id: "ecommerce-electro",
+          title: "TechStore",
+          description:
+            "eCommerce de productos electrónicos con sistema de recomendaciones y comparador de productos.",
+          image: "/images/portfolio-5.jpg",
+          category: "eCommerce",
+          tags: ["Shopify", "JavaScript", "Algolia", "Responsive"],
         },
         {
-          id: 'plataforma-educativa',
-          title: 'EduLearn',
-          description: 'Plataforma educativa con cursos online, sistema de evaluación y certificaciones digitales.',
-          image: '/images/portfolio-6.jpg',
-          category: 'Plataforma',
-          tags: ['Vue.js', 'Node.js', 'MongoDB', 'WebRTC']
-        }
-      ]
-    }
+          id: "plataforma-educativa",
+          title: "EduLearn",
+          description:
+            "Plataforma educativa con cursos online, sistema de evaluación y certificaciones digitales.",
+          image: "/images/portfolio-6.jpg",
+          category: "Plataforma",
+          tags: ["Vue.js", "Node.js", "MongoDB", "WebRTC"],
+        },
+      ],
+    };
   },
   computed: {
     categories() {
       // Extraer categorías únicas de los proyectos
-      const categories = this.projects.map(project => project.category)
-      return [...new Set(categories)]
+      const categories = this.projects.map((project) => project.category);
+      return [...new Set(categories)];
     },
     filteredProjects() {
-      if (this.activeFilter === 'all') {
-        return this.projects
+      if (this.activeFilter === "all") {
+        return this.projects;
       } else {
-        return this.projects.filter(project => project.category === this.activeFilter)
+        return this.projects.filter(
+          (project) => project.category === this.activeFilter
+        );
       }
-    }
+    },
   },
   mounted() {
     // Inicializar animaciones
-    if (typeof window !== 'undefined') {
-      import('scrollreveal').then(({ default: ScrollReveal }) => {
+    if (typeof window !== "undefined") {
+      import("scrollreveal").then(({ default: ScrollReveal }) => {
         const sr = ScrollReveal({
-          origin: 'bottom',
-          distance: '30px',
+          origin: "bottom",
+          distance: "30px",
           duration: 800,
           delay: 300,
-          easing: 'ease-in-out',
-          reset: false
-        })
-        
-        sr.reveal(this.$refs.filtersContainer, {})
-        sr.reveal(this.$refs.projectsContainer.children, { 
+          easing: "ease-in-out",
+          reset: false,
+        });
+
+        sr.reveal(this.$refs.filtersContainer, {});
+        sr.reveal(this.$refs.projectsContainer.children, {
           interval: 100,
-          delay: 300
-        })
-        sr.reveal(this.$refs.ctaBox, {})
-      })
+          delay: 300,
+        });
+        sr.reveal(this.$refs.ctaBox, {});
+      });
     }
-    
+
     // Inicializar GSAP para interacciones
-    if (typeof window !== 'undefined') {
-      import('gsap').then(({ gsap }) => {
+    if (typeof window !== "undefined") {
+      import("gsap").then(({ gsap }) => {
         // Animación para las tarjetas de proyecto en hover
-        const portfolioItems = document.querySelectorAll('.portfolio-item')
-        
-        portfolioItems.forEach(item => {
-          item.addEventListener('mouseenter', () => {
-            gsap.to(item.querySelector('.portfolio-overlay'), {
+        const portfolioItems = document.querySelectorAll(".portfolio-item");
+
+        portfolioItems.forEach((item) => {
+          item.addEventListener("mouseenter", () => {
+            gsap.to(item.querySelector(".portfolio-overlay"), {
               y: 0,
               duration: 0.3,
-              ease: 'power2.out'
-            })
-          })
-          
-          item.addEventListener('mouseleave', () => {
-            gsap.to(item.querySelector('.portfolio-overlay'), {
-              y: '100%',
+              ease: "power2.out",
+            });
+          });
+
+          item.addEventListener("mouseleave", () => {
+            gsap.to(item.querySelector(".portfolio-overlay"), {
+              y: "100%",
               duration: 0.3,
-              ease: 'power2.out'
-            })
-          })
-        })
-      })
+              ease: "power2.out",
+            });
+          });
+        });
+      });
     }
   },
   methods: {
     filterProjects(category) {
-      this.activeFilter = category
-    }
-  }
-}
+      this.activeFilter = category;
+    },
+  },
+};
 </script>
 
 <style scoped>
 .page-banner {
-  background: linear-gradient(140deg, var(--principal) 0%, var(--secundario) 100%);
+  background: linear-gradient(
+    140deg,
+    var(--principal) 0%,
+    var(--secundario) 100%
+  );
   padding: 8rem 0 5rem;
   text-align: center;
   color: var(--blanco);
+  display: grid;
+  place-content: center;
 }
 
 .page-banner h1 {
@@ -222,9 +249,8 @@ export default {
 
 .portfolio-filters {
   padding: 2rem 0;
-  background-color: var(--blanco);
+  background-color: #fdfdfd;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  position: sticky;
   top: 70px;
   z-index: 100;
 }
@@ -310,7 +336,11 @@ export default {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(0deg, rgba(45, 48, 71, 0.95) 0%, rgba(45, 48, 71, 0.8) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(45, 48, 71, 0.95) 0%,
+    rgba(45, 48, 71, 0.8) 100%
+  );
   color: var(--blanco);
   padding: 1.5rem;
   transform: translateY(100%);
@@ -341,7 +371,7 @@ export default {
 
 .portfolio-tags span {
   background-color: rgba(255, 255, 255, 0.2);
-  color: var(--blanco);
+  color: #FDFDFD;
   padding: 0.3rem 0.8rem;
   border-radius: 15px;
   font-size: 0.8rem;
@@ -383,11 +413,11 @@ export default {
   .projects-container {
     grid-template-columns: 1fr;
   }
-  
+
   .portfolio-filters {
     top: 60px;
   }
-  
+
   .cta-box {
     padding: 2rem;
   }

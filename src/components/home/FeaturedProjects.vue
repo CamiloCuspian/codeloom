@@ -45,25 +45,25 @@ export default {
       featuredProjects: [
         {
           id: 'ecommerce-moda',
-          title: 'FashionWave',
-          description: 'Tienda online de moda con catálogo dinámico, pasarela de pagos y sistema de gestión de inventario.',
-          image: '/images/portfolio-1.jpg',
+          title: 'Perfumeria Inspiración',
+          description: 'Tienda online de perfumes con catálogo dinámico, pasarela de pagos y sistema de gestión de inventario.',
+          image: '/images/inspiracion-perfumeria.avif',
           category: 'eCommerce',
           tags: ['Vue.js', 'Stripe', 'MongoDB', 'Responsive']
         },
         {
           id: 'app-restaurante',
-          title: 'FoodExpress',
-          description: 'Plataforma web para pedidos online de restaurante con reserva de mesas y sistema de fidelización.',
-          image: '/images/portfolio-2.jpg',
+          title: 'QualitystandarOhio',
+          description: 'Plataforma web para pedidos online de servicios de limpieza con reserva de perdonal y sistema de fidelización.',
+          image: '/images/quality-standard-ohio.avif',
           category: 'Aplicación Web',
           tags: ['React', 'Node.js', 'API REST', 'UX/UI']
         },
         {
           id: 'web-corporativa',
           title: 'ConsultX',
-          description: 'Sitio web corporativo para firma de consultoría con integración CRM y optimización SEO avanzada.',
-          image: '/images/portfolio-3.jpg',
+          description: 'Sitio web corporativo para Clinica estética con integración CRM y optimización SEO avanzada.',
+          image: '/images/tatiana-leal.avif',
           category: 'Sitio Web',
           tags: ['WordPress', 'SEO', 'Custom CMS', 'Analytics']
         }

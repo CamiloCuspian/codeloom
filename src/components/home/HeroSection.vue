@@ -11,7 +11,6 @@
       </div>
       <div class="hero-image animate-fade-in-right delay-300">
         <div class="hero-image-container animate-float">
-          <!-- Imagen de ejemplo, se reemplazará con la versión final -->
           <img src="/images/hero-image.svg" alt="Desarrollo web y eCommerce" />
         </div>
         <div class="hero-shape shape-1"></div>
