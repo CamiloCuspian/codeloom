@@ -21,7 +21,7 @@
             <p>Como expertos en desarrollo web y eCommerce, combinamos creatividad, tecnología y estrategia para crear soluciones a medida que conectan con audiencias y generan resultados tangibles.</p>
             <p>A lo largo de estos años, hemos colaborado con emprendedores, pequeñas empresas y organizaciones de diversos sectores, ayudándoles a navegar en el mundo digital y potenciar su crecimiento.</p>
             <div class="about-signature">
-              <img src="/images/signature.svg" alt="Firma del fundador" />
+              <img src="/vite.svg" alt="Firma del fundador" />
               <div class="signature-info">
                 <strong>Carlos Rodríguez</strong>
                 <span>Fundador & CEO</span>
@@ -29,7 +29,7 @@
             </div>
           </div>
           <div class="about-image">
-            <img src="/images/about-image.jpg" alt="Equipo de CodeLoom" />
+            <img src="/images/inspiracion-perfumeria.avif" alt="Equipo de CodeLoom" />
           </div>
         </div>
       </div>
