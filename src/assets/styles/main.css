@@ -10,6 +10,7 @@
   --fuente: "Montserrat", sans-serif;
   --radius: 16px;       /* Redondeado más moderno */
   --shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.12);
+  
 }
 
 *,
@@ -184,7 +185,8 @@ input {
 }
 
 .boton {
-  display: inline-block;
+  display: grid;
+  place-content: center;
   border-radius: var(--radius);
   text-decoration: none;
   padding: 14px 24px;
