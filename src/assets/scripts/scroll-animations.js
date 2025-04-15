@@ -19,7 +19,7 @@ export function initScrollAnimations() {
   const observerOptions = {
     root: null, // Viewport
     rootMargin: '0px',
-    threshold: 0.1 // El elemento es visible cuando al menos el 10% está en el viewport
+    threshold: 0.01 // El elemento es visible cuando al menos el 10% está en el viewport
   };
   
   // Callback que se ejecutará cuando un elemento entre en el viewport
