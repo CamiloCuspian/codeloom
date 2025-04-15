@@ -102,6 +102,7 @@ export default {
 
 .service-card {
   background-color: var(--blanco);
+  color: var(--grisFuentes);
   border-radius: var(--radius);
   padding: 2rem;
   transition: all 0.3s ease;

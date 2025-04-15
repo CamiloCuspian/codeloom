@@ -21,7 +21,7 @@ const routes = [
     path: '/about',
     name: 'about',
     component: () => import('../views/AboutView.vue'),
-    meta: { title: 'Sobre mí | CodeLoom' }
+    meta: { title: 'Sobre nosótros | CodeLoom' }
   },
   {
     path: '/contact',

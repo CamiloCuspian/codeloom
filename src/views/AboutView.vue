@@ -535,7 +535,7 @@ export default {
   display: flex;
   gap: 1.5rem;
   padding: 1.5rem;
-  background-color: var(--blanco);
+  background-color: var(--azul-oscuro);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   transition: transform 0.3s ease;

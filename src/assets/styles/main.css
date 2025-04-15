@@ -29,7 +29,7 @@ html {
 }
 
 body {
-  color: var(--grisFuentes);
+  color: var(--blanco);
   font-family: var(--fuente);
   background-color: #0F0F1A;
 }

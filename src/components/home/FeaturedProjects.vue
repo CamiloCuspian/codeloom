@@ -30,7 +30,7 @@
       
       <div class="view-all-projects" ref="viewAllBtn">
         <router-link to="/portfolio" class="boton boton_2">
-          Ver todos los proyectos <i class="fas fa-arrow-right"></i>
+          Ver Proyectos <i class="fas fa-arrow-right"></i>
         </router-link>
       </div>
     </div>
@@ -196,6 +196,8 @@ export default {
 }
 
 .view-all-projects {
+  display: flex;
+  justify-content: center;
   text-align: center;
   margin-top: 3rem;
 }

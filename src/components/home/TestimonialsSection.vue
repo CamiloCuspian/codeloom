@@ -151,7 +151,7 @@ export default {
 }
 
 .testimonial-card {
-  background-color: var(--blanco);
+  background-color: var(--principal);
   border-radius: var(--radius);
   padding: 2rem;
   box-shadow: var(--shadow);

@@ -99,53 +99,24 @@ export default {
           image: "/images/inspiracion-perfumeria.avif",
           category: "eCommerce",
           tags: ["Vue.js", "Stripe", "MongoDB", "Responsive"],
-          url: "https://inspiracion-gamma.vercel.app/",
+          url: "https://inspiracion-gamma.vercel.app/", 
         },
         {
-          id: "app-restaurante",
-          title: "FoodExpress",
-          description:
-            "Plataforma web para pedidos online de restaurante con reserva de mesas y sistema de fidelización.",
-          image: "/images/portfolio-2.jpg",
-          category: "Aplicación Web",
-          tags: ["React", "Node.js", "API REST", "UX/UI"],
+          id: 'app-restaurante',
+          title: 'QualitystandarOhio',
+          description: 'Plataforma web para pedidos online de servicios de limpieza con reserva de perdonal y sistema de fidelización.',
+          image: '/images/quality-standard-ohio.avif',
+          category: 'Aplicación Web',
+          tags: ['React', 'Node.js', 'API REST', 'UX/UI']
         },
         {
-          id: "web-corporativa",
-          title: "ConsultX",
-          description:
-            "Sitio web corporativo para firma de consultoría con integración CRM y optimización SEO avanzada.",
-          image: "/images/portfolio-3.jpg",
-          category: "Sitio Web",
-          tags: ["WordPress", "SEO", "Custom CMS", "Analytics"],
-        },
-        {
-          id: "app-inmobiliaria",
-          title: "InmoSearch",
-          description:
-            "Aplicación web para búsqueda y gestión de propiedades inmobiliarias con mapas interactivos.",
-          image: "/images/portfolio-4.jpg",
-          category: "Aplicación Web",
-          tags: ["Angular", "Firebase", "Google Maps API", "PWA"],
-        },
-        {
-          id: "ecommerce-electro",
-          title: "TechStore",
-          description:
-            "eCommerce de productos electrónicos con sistema de recomendaciones y comparador de productos.",
-          image: "/images/portfolio-5.jpg",
-          category: "eCommerce",
-          tags: ["Shopify", "JavaScript", "Algolia", "Responsive"],
-        },
-        {
-          id: "plataforma-educativa",
-          title: "EduLearn",
-          description:
-            "Plataforma educativa con cursos online, sistema de evaluación y certificaciones digitales.",
-          image: "/images/portfolio-6.jpg",
-          category: "Plataforma",
-          tags: ["Vue.js", "Node.js", "MongoDB", "WebRTC"],
-        },
+          id: 'web-corporativa',
+          title: 'ConsultX',
+          description: 'Sitio web corporativo para Clinica estética con integración CRM y optimización SEO avanzada.',
+          image: '/images/tatiana-leal.avif',
+          category: 'Sitio Web',
+          tags: ['WordPress', 'SEO', 'Custom CMS', 'Analytics']
+        }
       ],
     };
   },
@@ -384,9 +355,12 @@ export default {
 }
 
 .cta-box {
-  background-color: var(--blanco);
+  background-color: var(--principal);
   border-radius: var(--radius);
   padding: 3rem;
+  display: grid;
+  place-content: center;
+  place-items: center;
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
